@@ -1,5 +1,6 @@
 const TableManager = require('./TableManager')
 const SortingManager = require('./SortingManager')
+const StatManager = require('./StatManager')
 
 class CiEsVi {
 
@@ -14,6 +15,7 @@ class CiEsVi {
       row: this.data.length
     }
     this.sortingManager = new SortingManager(this.rows)
+    this.statManager = new StatManager();
   }
 
   get table() {
@@ -21,12 +23,19 @@ class CiEsVi {
     return this.TableManager.table
   }
 
-  sortedArray (compare, sortId) {
+  sortedArray(compare, sortId) {
     return this.sortingManager.sort(compare, sortId)
   }
 
-  sortedCSV (compare, sortId) {
+  sortedCSV(compare, sortId) {
     return this.sortedArray(compare, sortId).join(this.options.rowSplitter)
+  }
+
+  get stats() {
+    return {
+      punctuation: this.statManager.punctuationStat(this.data),
+      wc: this.statManager.wc(this.data)
+    }
   }
 
 }
