@@ -34,7 +34,7 @@ class CiEsVi {
   get stats() {
     return {
       punctuation: this.statManager.punctuationStat(this.data),
-      wc: this.statManager.wc(this.data)
+      wc: this.statManager.wc(this.data, this.options.rowSplitter)
     }
   }
 
