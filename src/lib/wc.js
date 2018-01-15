@@ -5,7 +5,7 @@ const wc = data => {
 
   const rows = data.split('\n')
   lines = rows.length
-  words = rows.reduce((acc, row) => acc + row.match(/\S+/g).length, 0)
+  words = rows.reduce((acc, row) => acc + row.match(/[a-zA-Z0-9]+/g).length, 0)
   letters = data.length
 
   return {

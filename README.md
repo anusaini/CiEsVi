@@ -51,6 +51,15 @@ A CSV library - node module
     }
   }
 
+  > c.stats
+  { punctuation:
+    { punctuations: [ '!', '?', '.', ',', ';', ':' ],
+      found: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+      total: 8,
+      message: 'Found 8 punctuations of 6 types: ! ? . , ; :' },
+    wc: { lines: 4, words: 12, letters: 23 }
+  }
+
 ```
 
 ## License
