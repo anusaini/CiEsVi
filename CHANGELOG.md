@@ -4,6 +4,7 @@
 
 - Fixes wc word count bug
 - Closes [#2](https://github.com/anusaini/CiEsVi/issues/2)
+- Closes [#3](https://github.com/anusaini/CiEsVi/issues/3)
 - Introduces Jasmine and Chai as dev dependencies
 - Tests wc.js
 
